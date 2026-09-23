@@ -28,10 +28,26 @@ namespace Actividad_Plataforma_Streaming
                 audiolibro1
             };
 
+            // PARTE 9: Reproducir contenidos
+            Console.WriteLine("----------------------------------");
+            Console.WriteLine("          REPRODUCCIÓN            ");
+            Console.WriteLine("----------------------------------");
+
             foreach (Contenido c in contenidos)
             {
                 c.Reproducir();
             }
-        }
+
+
+            }
+        
+        }    
+
     }
-}
+
+
+    
+
+    
+
+           
