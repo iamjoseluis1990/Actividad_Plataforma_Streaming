@@ -20,11 +20,6 @@ namespace Actividad_Plataforma_Streaming
             this.NumeroEpisodio = numEpisodio;    
         }
 
-        public void AumentarReproducciones()
-        {
-            this.Reproducciones++;
-        }
-
         public void MostrarCancion()
         {
             Console.WriteLine(
