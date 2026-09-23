@@ -20,12 +20,6 @@ namespace Actividad_Plataforma_Streaming
             this.Reproducciones = Reproducciones;
         }
 
-      
-        public void AumentarReproducciones()
-        {
-            this.Reproducciones += 1;
-        }
-
         public void MostrarCancion()
         {
             Console.WriteLine(
@@ -35,7 +29,8 @@ namespace Actividad_Plataforma_Streaming
         }
         public override void Reproducir()
         {
-            throw new NotImplementedException();
+            this.Reproducciones++;
+            this.MostrarCancion();
         }
     }
 }

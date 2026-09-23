@@ -34,7 +34,8 @@ namespace Actividad_Plataforma_Streaming
         }
         public override void Reproducir()
         {
-            throw new NotImplementedException();
+            this.Reproducciones++;
+            this.MostrarCancion();
         }
     }
 }
