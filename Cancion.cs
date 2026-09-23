@@ -7,17 +7,20 @@ namespace Actividad_Plataforma_Streaming
 {
     public class Cancion : Contenido
     {
+        public String Artista { get; set; }
+
+        public String Genero { get; set; }
+
         public Cancion(string Titulo, int Duracion,
-           int Reproducciones, string artista, string genero) : base(Titulo, Duracion, Reproducciones)
+           int Reproducciones, string artista, string genero) 
+            : base(Titulo, Duracion, Reproducciones)
         {
             Artista = artista;
             Genero = genero;
             this.Reproducciones = Reproducciones;
         }
 
-        public String Artista { get; set; }
-
-        public String Genero { get; set; }
+      
         public void AumentarReproducciones()
         {
             this.Reproducciones += 1;

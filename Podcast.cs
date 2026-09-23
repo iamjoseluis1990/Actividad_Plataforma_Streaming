@@ -7,20 +7,22 @@ namespace Actividad_Plataforma_Streaming
 {
     public class Podcast : Contenido
     {
-        private string presentador;
-
-        public Podcast(string Presentador, int NumeroEpisodio,
-           int Reproducciones, string artista, string numeroepisodio) : base(Presentador, NumeroEpisodio, Reproducciones)
-        {
-            this.Reproducciones = Reproducciones;
-        }
 
         public String Presentador { get; set; }
 
         public String NumeroEpisodio { get; set; }
+
+        public Podcast(string titulo, double duracion, int reproducciones,
+            string presentador, string numEpisodio) 
+            : base(titulo, duracion, reproducciones)
+        {
+            this.Presentador = presentador;
+            this.NumeroEpisodio = numEpisodio;    
+        }
+
         public void AumentarReproducciones()
         {
-            this.Reproducciones += 1;
+            this.Reproducciones++;
         }
 
         public void MostrarCancion()
