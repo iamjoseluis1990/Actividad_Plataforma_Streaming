@@ -5,20 +5,10 @@ using System.Text;
 
 namespace Actividad_Plataforma_Streaming
 {
-    internal class Class1
-    {
-    }
-}
-
-
-
-namespace Actividad_Plataforma_Streaming
-{
     public class Audiolibro : Contenido
     {
         public string Autor { get; set; }
         public string Narrador { get; set; }
-        public int Reproducciones { get; private set; }
 
         public Audiolibro(string titulo, double duracion, int reproducciones, string autor, string narrador)
             : base(titulo, duracion, reproducciones)
@@ -27,14 +17,19 @@ namespace Actividad_Plataforma_Streaming
             Narrador = narrador;
         }
 
-        public override void Reproducir()
+        public void MostrarAudioLibro()
         {
-            this.Reproducciones++;
             Console.WriteLine(
                 $"Reproduciendo audiolibro: {Titulo}\n" +
                 $"Autor: {Autor}\n" +
                 $"Narrador: {Narrador}\n" +
                 $"Reproducciones: {Reproducciones}");
+        }
+
+        public override void Reproducir()
+        {
+            this.Reproducciones++;
+            this.MostrarAudioLibro();
         }
     }
 }
