@@ -5,19 +5,19 @@ using System.Text;
 
 namespace Actividad_Plataforma_Streaming
 {
-    public class Cancion : Contenido
+    public class Cancion : Contenido, IDescargable
     {
+
         public String Artista { get; set; }
 
         public String Genero { get; set; }
 
-        public Cancion(string Titulo, int Duracion,
-           int Reproducciones, string artista, string genero) 
-            : base(Titulo, Duracion, Reproducciones)
+        public Cancion(string titulo, double duracion, int reproducciones,
+            string artista, string genero) 
+        : base(titulo, duracion, reproducciones)
         {
-            Artista = artista;
-            Genero = genero;
-            this.Reproducciones = Reproducciones;
+            this.Artista = artista;
+            this.Genero = genero;
         }
 
         public void MostrarCancion()
@@ -31,6 +31,16 @@ namespace Actividad_Plataforma_Streaming
         {
             this.Reproducciones++;
             this.MostrarCancion();
+        }
+
+        public void Descargar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void EliminarDescarga()
+        {
+            throw new NotImplementedException();
         }
     }
 }
