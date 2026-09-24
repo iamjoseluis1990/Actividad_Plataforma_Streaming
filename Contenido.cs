@@ -8,14 +8,7 @@ namespace PlataformaStreaming
         // Propiedades: Titulo, Duracion (en minutos) y Reproducciones
         public string Titulo { get; set; }
         public double Duracion { get; set; }
-        public int Reproducciones { get; set; }
-
-        public virtual void Reproducir()
-        {
-            Reproducciones++;
-            Console.WriteLine($"Reproduciendo: {Titulo}");
-            Console.WriteLine($"Reproducciones: {Reproducciones}");
-        }
+        public int Reproducciones { get; private set; }
 
         // Constructor para establecer los valores
         public Contenido(string titulo, double duracion, int reproducciones)
@@ -33,6 +26,7 @@ namespace PlataformaStreaming
             Console.WriteLine($"Reproducciones: {Reproducciones}");
         }
 
+        // Método abstracto: cada tipo de contenido decidirá cómo se reproduce
+        public abstract void Reproducir();
     }
 }
-

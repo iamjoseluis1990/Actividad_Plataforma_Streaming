@@ -38,16 +38,30 @@ namespace Actividad_Plataforma_Streaming
                 c.Reproducir();
             }
 
+            // PARTE 10 — DESCARGAS
+            Console.WriteLine("\n=====================================");
+            Console.WriteLine("              DESCARGAS              ");
+            Console.WriteLine("=====================================\n");
 
+            // Recorremos todos los contenidos para intentar descargarlos
+            foreach (Contenido c in contenidos)
+            {
+                if (c is IDescargable descargable)
+                {
+                    descargable.Descargar();
+                    Console.WriteLine($"{c.Titulo} -> Descargado");
+                }
+                else
+                {
+                    Console.WriteLine($"{c.Titulo} -> No disponible para descarga");
+                }
             }
-        
-        }    
 
+        }
     }
+}
 
 
-    
 
-    
 
-           
+

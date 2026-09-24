@@ -11,9 +11,10 @@ namespace Actividad_Plataforma_Streaming
         public String Artista { get; set; }
 
         public String Genero { get; set; }
+        public int Reproducciones { get; private set; }
 
         public Cancion(string titulo, double duracion, int reproducciones,
-            string artista, string genero) 
+            string artista, string genero)
         : base(titulo, duracion, reproducciones)
         {
             this.Artista = artista;
@@ -43,10 +44,10 @@ namespace Actividad_Plataforma_Streaming
             throw new NotImplementedException();
         }
 
-        
+
     }
 }
 
-       
+
 
 
